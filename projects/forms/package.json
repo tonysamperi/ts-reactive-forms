@@ -1,0 +1,74 @@
+{
+  "name": "@ts-reactive-forms/forms",
+  "version": "1.0.0",
+  "description": "A standalone version of Angular reactive forms!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonysamperi/ts-reactive-forms.git"
+  },
+  "keywords": [
+    "js",
+    "reactive forms",
+    "reactive",
+    "forms",
+    "angular",
+    "typescript"
+  ],
+  "author": "Tony Samperi <github@tonysamperi.it> (tonysamperi.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonysamperi/ts-reactive-forms-forms/issues"
+  },
+  "homepage": "https://github.com/tonysamperi/ts-reactive-forms-forms#readme",
+  "main": "dist/ts-reactive-forms.umd.js",
+  "module": "dist/ts-reactive-forms.es5.js",
+  "typings": "dist/types/ts-reactive-forms.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=14.18.1"
+  },
+  "scripts": {
+    "lint": "tslint --project tsconfig.json src/**/*.ts -t codeFrame",
+    "lint:tests": "tslint  --project ./test/tsconfig.json -t codeFrame",
+    "tag": "gulp tag",
+    "build": "rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.ts -w",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "yarn run lint && yarn run test --no-cache"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/jsdom": "^12.2.4",
+    "@types/node": "^10.14.21",
+    "@types/rollup-plugin-sourcemaps": "^0.4.2",
+    "@types/ungap__structured-clone": "^0.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "codecov": "^3.8.3",
+    "eslint": "^8.0.0",
+    "gulp": "^4.0.2",
+    "jest": "~27.3.0",
+    "jsdom": "^16.5.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "4.2.4",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "~27.0.7",
+    "ts-node": "^10.3.0",
+    "tslib": "^2.5.0",
+    "tslint-consistent-codestyle": "^1.16.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@ungap/structured-clone": "^1.2.0",
+    "rxjs": "^7.4.0"
+  }
+}
